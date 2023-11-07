@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include
+        android:id="@+id/layout_video"
+        layout="@layout/layout_video"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/view1"
+        app:layout_constraintDimensionRatio="3:4"
+        app:layout_constraintTop_toTopOf="parent"></include>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_face_preview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/layout_video"
+        app:layout_constraintTop_toTopOf="@id/layout_video" />
+
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_video" />
+
+    <TextView
+        android:layout_width="271dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Apunte la camara a su rostro dentro
+delmarco mostrado."
+        android:textColor="#ffffffff"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view1" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_take_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:src="@mipmap/take_photo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/pic_confirm"
+        app:layout_constraintBottom_toBottomOf="@id/iv_take_photo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/iv_take_photo"
+        app:layout_constraintTop_toTopOf="@id/iv_take_photo" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/pic_cancel"
+        app:layout_constraintBottom_toBottomOf="@id/iv_take_photo"
+        app:layout_constraintLeft_toRightOf="@+id/iv_take_photo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_take_photo" />
+</androidx.constraintlayout.widget.ConstraintLayout>
